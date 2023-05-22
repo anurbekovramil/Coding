@@ -1,38 +1,35 @@
-
+// Место для первой задачи
 function firstTask() {
-    for (let i = 5; i <= 10; ++i) {
-        console.log(i);
-    }
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const arr = [3, 5, 8, 16, 20, 23, 50];
+    const result = [];
+    for (let i = 0; i < arr.length; i++) { result[i] = arr[i]; }
+    for (let i in result) { console.log(result[i]); }
+    return result;
 }
+// Место для второй задачи
 function secondTask() {
-    for (let i = 20; i > 10; --i) {
-        if (i == 13) { break; }
-        else { console.log(i); }
-    }
-}
-function thirdTask() {
-    for (let i = 0; i <= 10; ++i) {
-        if (i != 0 && i % 2 == 0) { console.log(i); }
-    }
-}
-function fourthTask() {
-    let i = 2;
-    while (true) {
-        if (i != 16) {
-            if (i % 2 == 0) { i++; continue; }
-            else { console.log(i); }
-            i++;
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    for(let i = 0; i < data.length; i++) {
+        if (typeof (data[i]) === 'number') {
+            data[i] = data[i] * 2;
         }
-        else if (i == 16) { false; break; }
+        else if (typeof (data[i]) === 'string') {
+            data[i] = `${data[i]}- done`;
+        }
+
     }
+    return data;
 }
-function fifthTask() {
-    var arrayOfNumbers = [];
-    for(let i = 5; i <= 10; i++) {
-        arrayOfNumbers.push(i);
+// Место для третьей задачи
+function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+    for(let i = 0, j = data.length-1; i <= data.length,j >= 0; i++,j--) {
+        result[i] = data[j];
     }
-    for(let i in arrayOfNumbers) {
-        console.log(arrayOfNumbers[i]);
-    }
-    return arrayOfNumbers;
-}  
+    return result;
+}
+thirdTask();
